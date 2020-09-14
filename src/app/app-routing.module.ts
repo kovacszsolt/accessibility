@@ -13,7 +13,14 @@ const routes: Routes = [
     path: 'page2',
     component: Page2Component
   },
-
+  {
+    path: 'pagea',
+    loadChildren: () => import('./pagea/pagea.module').then(m => m.PageaModule)
+  },
+  {
+    path: 'pageb',
+    loadChildren: () => import('./pageb/pageb.module').then(m => m.PagebModule)
+  },
 ];
 
 @NgModule({
